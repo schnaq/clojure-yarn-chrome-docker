@@ -30,6 +30,7 @@ jobs:
       - name: Build image
         run: >
           docker build .
+          --pull
           --file Dockerfile
           --tag $IMAGE_NAME
           --label "org.opencontainers.image.source=https://github.com/${{ github.repository }}"
