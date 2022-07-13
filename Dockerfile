@@ -1,5 +1,7 @@
 FROM clojure:openjdk-17-tools-deps-slim-buster
 
+WORKDIR /code
+
 RUN apt-get update && \
     apt-get -y upgrade && \
     apt-get -y install curl gnupg2 software-properties-common
